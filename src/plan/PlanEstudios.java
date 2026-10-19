@@ -18,6 +18,9 @@ public class PlanEstudios {
         // TODO: crear los cursos del plan aquí dentro
         // Ejemplo esperado: agregar 3 cursos (obligatorio, electivo, nivelatorio)
         // usando el método privado agregarCurso(...).
+        agregarCurso(new CursoObligatorio("123","Calculo integral",3));
+        agregarCurso(new CursoElectivo("1234","Estructura de Datos",4));
+        agregarCurso(new CursoNivelatorio("12345","Arquitectura del Computador",2));
     }
 
     /**
@@ -26,6 +29,7 @@ public class PlanEstudios {
      */
     private void agregarCurso(Curso curso) {
         // TODO: implementar
+        cursos.add(curso);
     }
 
     /**
@@ -34,7 +38,12 @@ public class PlanEstudios {
      */
     public double dificultadPromedio() {
         // TODO: implementar
-        return 0;
+        if (cursos.isEmpty())return 0;
+        double suma=0;
+        for (int i = 0; i < cursos.size(); i++) {
+            suma = suma + cursos.get(i).dificultadEsperada();
+        }
+        return suma / cursos.size();
     }
 
     public String getNombre() { return nombre; }
