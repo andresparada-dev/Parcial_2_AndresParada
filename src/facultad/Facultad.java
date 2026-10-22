@@ -19,6 +19,7 @@ public class Facultad {
     /** Agrega un plan ya existente (agregación). */
     public void agregarPlan(PlanEstudios plan) {
         // TODO: implementar
+        planes.add(plan);
     }
 
     /**
@@ -26,7 +27,11 @@ public class Facultad {
      */
     public int totalCursos() {
         // TODO: implementar
-        return 0;
+        int total= 0;
+        for (int i= 0; i<planes.size(); i++) {
+            total= total + planes.get(i).getCursos().size();
+        }
+        return total;
     }
 
     public String getNombre() { return nombre; }
