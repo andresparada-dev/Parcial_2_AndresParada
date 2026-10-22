@@ -21,7 +21,7 @@ Explica la diferencia entre `PlanEstudios ◆— Curso` (composición) y
 `Facultad ◇— PlanEstudios` (agregación). ¿Qué pasaría con los cursos si se
 elimina el plan? ¿Y con los planes si se elimina la facultad?
 
-> _Tu respuesta:_ Si se elimina el plan se van a eliminar todos los cursos, pero si se elimina la facultad, los planes pueden seguir existiendo
+> _Tu respuesta:_ Si se elimina el plan se van a eliminar todos los cursos, pero si se elimina la facultad, los planes pueden seguir existiendo. Composicion se basa en que el contenedor o creador que en este caso es el Plan de Estudios, va a crear, guardar y almacenar en un arreglo los cursos, por esto si se elimina el contenedor se elimina el almacenado, mientras que en Agregación el contenedor solo utiliza a la otra clase pero si este se elimina no pasará nada con la otra
 
 ---
 
